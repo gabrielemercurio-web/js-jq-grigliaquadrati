@@ -3,13 +3,13 @@
 // genero 10 numeri random
 $('.quadrato').each(function() {
 
-    var random = Math.floor(Math.random() * 10) + 1;
-    $('.quadrato').text(random);
-
-    if (random) {
-
-    } else {
-
-    }
+    var numero_random = generaRandom(0, 10);
+    $(this).text(numero_random);
 
 });
+
+
+function generaRandom(min, max) {
+  var random = Math.floor(Math.random() * (max - min + 1) ) + min;
+  return random
+}
